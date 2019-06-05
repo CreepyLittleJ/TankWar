@@ -1,0 +1,15 @@
+ private void BornTank()
+    {
+        if (createPlayer)
+        {
+            Instantiate(playerPrefab, transform.position, Quaternion.identity);
+        }
+        else
+        {
+            int num = Random.Range(0, 2);
+            Instantiate(enemyPrefabList[num], transform.position, Quaternion.identity);
+        }
+        
+    }
+    坦克重生与产生的方法。
+   在后面的脚本里调用此方法，可以完成敌人的产生和我方的重生。
